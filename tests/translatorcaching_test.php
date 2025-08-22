@@ -54,6 +54,10 @@ class translatorcaching_test extends advanced_testcase {
         set_config('perfdebug', 15);
     }
 
+    /**
+     * For stats to work we need a new instance of the cache.
+     * @runInSeparateProcess
+     */
     public function test_get_best_translation() {
         global $SESSION;
 
